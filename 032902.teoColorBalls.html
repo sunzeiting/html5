@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app" align="center">
+			<h1>红球：{{red1}},{{red2}},{{red3}},{{red4}},{{red5}},{{red6}}&nbsp;&nbsp;蓝球：{{blue}}</h1><br>
+			<h1><input v-on:click="red1=Math.ceil(Math.random()*30+2);
+						   red2=Math.ceil(Math.random()*30+3);
+						   red3=Math.ceil(Math.random()*30+3);
+						   red4=Math.ceil(Math.random()*30+3);
+						   red5=Math.ceil(Math.random()*30+3);
+						   red6=Math.ceil(Math.random()*30+3);
+						   blue=Math.ceil(Math.random()*10+6)" type="button" value="双色球"/></h1>	
+					
+					
+				</div>
+				<script type="text/javascript">
+					new Vue({
+						el:"#app",
+						data:{
+							
+								red1:'',
+								red2:'',
+								red3:'',
+								red4:'',
+								red5:'',
+								red6:'',
+								red7:'',
+								blue:''
+								
+							
+						}
+					})
+				</script>
+	</body>
+</html>

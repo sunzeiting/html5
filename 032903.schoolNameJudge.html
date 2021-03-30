@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<h1>学校名称</h1>
+			<h1>{{school}}</h1>
+			<h1><input v-model="school" type="tex"/></h1>
+			<li v-if="school=='清华大学'||school=='北京大学'
+||school=='复旦大学'
+||school=='上海交通大学'
+||school=='中国科学技术大学'
+||school=='南京大学'
+||school=='浙江大学'
+||school=='中国人民大学'
+||school=='同济大学'
+||school=='北京航空航天大学'
+||school=='浙江大学医学院'
+||school=='南开大学'
+||school=='哈尔滨工业大学'
+||school=='北京理工大学'
+||school=='西安交通大学'
+||school=='中国人民大学'
+||school=='华中科技大学'
+||school=='北京师范大学'
+||school=='武汉大学'
+||school=='国防科技大学'
+||school=='天津大学'
+||school=='东南大学'
+||school=='哈尔滨工业大学'
+||school=='电子科技大学'
+||school=='厦门大学'
+||school=='中山大学'
+||school=='华南理工大学'
+||school=='华东师范大学'
+||school=='电子科技大学'
+||school=='中央财经大学'
+||school=='中国政法大学'
+||school=='四川大学'
+||school=='中南大学'
+||school=='西北工业大学'
+||school=='重庆大学'
+||school=='山东大学'
+||school=='哈尔滨工业大学'
+||school=='北京交通大学'
+||school=='吉林大学'
+||school=='暨南大学'
+||school=='兰州大学'
+">{{school}}是985，211大学</li>
+			<li v-if="school=='东华大学'
+||school=='南京理工大学'
+||school=='大连理工大学'
+||school=='西安电子科技大学'
+||school=='武汉理工大学'
+||school=='北京邮电大学'
+||school=='北京化工大学'
+||school=='华中师范大学'
+||school=='上海外国语大学'
+||school=='北京科技大学'
+||school=='中国传媒大学'
+||school=='湖南大学'
+||school=='北京外国语大学'
+||school=='北京工业大学'
+||school=='华东理工大学'
+||school=='上海大学'
+||school=='中央民族大学'
+||school=='山东大学威海分校'
+||school=='北京邮电大学'
+||school=='空军军医大学'
+||school=='东北大学'
+||school=='华北电力大学'
+||school=='中国海洋大学'
+||school=='苏州大学'
+||school=='河海大学'
+||school=='江南大学'
+||school=='南京师范大学'
+||school=='西北大学'
+||school=='大连理工大学'
+||school=='西南大学'
+||school=='华北电力大学'
+||school=='东北大学秦皇岛分校'
+||school=='西南交通大学'
+||school=='西南财经大学'
+||school=='哈尔滨工程大学'
+||school=='河北工业大学'
+||school=='华南师范大学'
+||school=='中国地质大学'
+||school=='中国地质大学'
+||school=='北京林业大学'
+||school=='陕西师范大学'
+||school=='福州大学'
+||school=='中国石油大学'
+||school=='天津医科大学'
+||school=='中国矿业大学'
+||school=='北京中医药大学'
+||school=='中国农业大学'
+||school=='安徽大学'
+||school=='中国药科大学'
+||school=='湖南师范大学'
+||school=='合肥工业大学'
+||school=='郑州大学'
+||school=='中国石油大学'
+||school=='云南大学'
+||school=='长安大学'
+||school=='华中农业大学'
+||school=='西北农林科技大学'
+||school=='东北师范大学'
+||school=='合肥工业大学'
+||school=='南京农业大学'
+||school=='南京航空航天大学'
+||school=='辽宁大学'
+||school=='南昌大学'
+||school=='广西大学'
+||school=='太原理工大学'
+||school=='贵州大学'
+||school=='中国矿业大学'
+||school=='上海财经大学'
+||school=='西南大学'
+||school=='海南大学'
+||school=='东北林业大学'
+||school=='中南财经政法大学'
+||school=='内蒙古大学'
+||school=='东北农业大学'
+||school=='四川农业大学'
+||school=='延边大学'
+||school=='青海大学'
+||school=='宁夏大学'
+||school=='新疆大学'
+||school=='石河子大学'
+||school=='对外经济贸易大学'
+||school=='大连海事大学'
+||school=='西藏大学'
+">{{school}}是211大学</li>
+			
+			
+			
+		</div>
+		<script type="text/javascript">
+			new Vue({
+				el:"#app",
+				data(){
+					return{
+						school:''
+					}
+				}
+			})
+		</script>
+	</body>
+</html>
