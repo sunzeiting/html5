@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<div>
+				<input v-model="number" />
+				<div v-for="country in countrys" >
+				<li  v-if="country.num==number">你输入的+{{country.num}}是{{country.location}},首都是{{country.pro}}</li>
+				
+			</div>
+			</div>
+		</div>	
+		<script type="text/javascript">
+			new Vue({
+				el:'#app',
+				data(){
+					return{
+						number:'',
+						countrys:[
+							{num:'86',location:'中国',pro:'北京'},
+							{num:'1',location:'美国',pro:'纽约'},
+							{num:'44',location:'英国',pro:'伦敦'}
+							
+						]
+				}
+			}
+			})
+		</script>
+	</body>
+</html>
