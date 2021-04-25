@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<img src="./img/海绵宝宝.jpg" @click="score()"/><br>
+			<h3>得分:{{scores}}</h3>
+			<h3 v-if="scores>=3">游戏通过</h3>
+		</div>
+		<script type="text/javascript">
+			let v=new Vue({
+				el:'#app',
+				data:{
+					scores:0,
+					scores1:0,
+					scores2:0,
+					scores3:0
+					
+					
+				},
+				methods:{
+					score(){
+						
+							if((event.clientX>109&&event.clientX<153&&event.clientY>27&&event.clientY<60)||(event.clientX>409&&event.clientX<445&&event.clientY>27&&event.clientY<60)){
+								v.scores1++
+								if(v.scores1>=1){
+									v.scores1=1
+								}
+							}					
+							if((event.clientX>318&&event.clientX<324&&event.clientY>283&&event.clientY<328)||(event.clientX>10&&event.clientX<25&&event.clientY>283&&event.clientY<328)){
+								v.scores2++
+								if(v.scores2>=1){
+									v.scores2=1
+								}
+							}										
+							if((event.clientX>192&&event.clientX<208&&event.clientY>124&&event.clientY<151)||(event.clientX>487&&event.clientX<512&&event.clientY>124&&event.clientY<151)){
+								v.scores3++
+								if(v.scores3>=1){
+									v.scores3=1
+								}
+							}
+							v.scores=v.scores1+v.scores2+v.scores3						
+					}
+				}
+			})
+		</script>
+		
+	</body>
+</html>
