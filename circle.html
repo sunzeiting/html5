@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<canvas id="myCanvas" width="1000" height="800"></canvas>
+		<div id="app">
+			<input type="button" name="" id="" value="点击绘图" @click=show() />
+			<input type="text" name="" id="" value="" v-model="r"/>
+		</div>
+		<script type="text/javascript">
+			let v=new Vue({
+				el:"#app",
+				data:{
+					r:'0'
+				},
+				methods:{
+					show(){
+						let canvans=document.getElementById("myCanvas");
+						let context=canvans.getContext("2d");
+						context.beginPath();
+						
+						
+						context.arc(400,400,this.r,0,2*Math.PI);
+						context.stroke();
+					}
+				}
+		
+						})
+			
+		</script>
+	</body>
+</html>
