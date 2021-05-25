@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<canvas id="myCanvas" width="1920" height="1080"></canvas>
+		<div id="app">
+			<input type="text" name="" id="myText" value="" @keyup.enter="show()"/>
+		<div>
+		<script type="text/javascript">
+			let v=new Vue({
+				el:"#app",
+				data:{
+					
+				},
+				methods:{
+					show(){
+						let canvas=document.getElementById("myCanvas");
+						let context=canvas.getContext("2d");
+						let img=new Image();
+						
+						let myText=document.getElementById("myText").value;
+						
+							img.src="./img/"+myText+".jpg"
+						
+						img.onload=function(){
+							context.drawImage(img,0,0);
+						}
+						if(myText==null||myText==""){
+							location.reload();
+						}
+					}
+				}
+			})
+		</script>
+	</body>
+</html>
